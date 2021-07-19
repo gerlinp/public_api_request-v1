@@ -82,7 +82,7 @@ form label {
     left: 0;
 }
 
-.email {
+.address{
     color: lightgreen;
 }
 
@@ -113,7 +113,6 @@ form label {
     padding: 10px;
     background: rgb(4, 57, 39,0.4);
     border-radius: 0.25em;
-
     transition: .4s ease-out;
     overflow: hidden;
 }
@@ -164,7 +163,7 @@ form label {
     min-height: 415px;
     margin: 10px auto auto;
     padding-bottom: 15px;
-    background: rgba(4, 57, 39,1);
+    background: #043139;
     color: #fff;
     border-radius: 0.25em;
     border: 1px solid rgba(100, 100, 100, 0.3);
@@ -234,6 +233,37 @@ form label {
   }
   
 
+  button {
+    border-radius: 5px;
+    border: none;
+    margin: 1rem;
+    font-weight: bolder;
+  }
+  
+.prev, .next {
+    width: 100px;
+    font-family: inherit;
+    padding: 10px;
+    color:
+    padding: 1.5rem 3rem;
+}
+
+.btn {
+    background: rebeccapurple;
+    border-radius: 5px;
+    color: white;
+    border: none;
+    margin: 1rem;
+    padding: 1.5rem 3rem;
+    font-family: inherit;
+}
+
+.btn:hover {
+    opacity:0.9;
+}
+.btn:focus {
+    outline: none;
+}
 /* ===================================== 
    Media Queries
 ======================================== */
@@ -273,7 +303,7 @@ form label {
 @media (min-width: 1024px) {
 
     .card:hover {
-        background: rgba(255, 255, 255, 1);
+        background: #043139;
         border: 1px solid rgba(50, 50, 50, 0.9);
     }
 
