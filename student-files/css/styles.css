@@ -16,7 +16,7 @@ html, body {
 body {
     font-family: "Nunito", sans-serif;
     text-align: center;
-    background: rgba(235, 235, 235, 0.9);
+    background: #2e8b57;
 }
 
 header {
@@ -35,15 +35,18 @@ header h1 {
 }
 
 .search-input {
-    padding: 0.4rem 1rem;
-    border: 1px solid rgba(200, 200, 200, 0.9);
-    border-radius: 0.25rem 0 0 0.25rem ;
+    padding: 15px 100px;
+    border: 0;
+    border-bottom: 2px #fff solid;
     max-width: 20rem;
     transition: .4s ease-out;
+    background: transparent;
+    color: #fff;
 }
 
 .search-input:active, .search-input:hover, .search-input:focus {
-    border: 1px solid rgba(50, 50, 50, 0.9);
+    outline:0;
+    border-bottom-color: lightgreen;
 }
 
 .search-submit {
@@ -85,7 +88,7 @@ header h1 {
     max-width: 360px;
     margin: 10px 10px 20px;
     padding: 10px;
-    background: rgba(245, 245, 245, 0.9);
+    background: rgb(4, 57, 39,0.4);
     border-radius: 0.25em;
     border: 1px solid rgba(50, 50, 50, 0.3);
     transition: .4s ease-out;
@@ -257,3 +260,39 @@ header h1 {
         color: rgba(25, 25, 25, 1); 
     }
 }
+
+
+/* -------------OVERLAY--------------- */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(100, 100, 100, 0.4)
+}
+.modal {
+    width: 375px;
+    margin: 15% auto auto;
+    position: relative;
+    text-align: center;
+    background: #fff;
+    border: 1px solid #778;
+    border-radius: 5px;
+    padding: 30px 20px;
+    color:rgba(96,114,154);
+    font-weight: bold;
+}
+
+.modal-close {
+    position: absolute;
+    right: 15px;
+    top: 5px;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+
