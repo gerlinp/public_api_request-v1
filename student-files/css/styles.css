@@ -2,7 +2,7 @@
    Public API Request
 ======================================== */
 
-@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url('https://fonts.googleapis.com/css?family=Muli');
 
 * {
 	box-sizing: border-box;
@@ -14,7 +14,7 @@ html, body {
 }
 
 body {
-    font-family: "Nunito", sans-serif;
+    font-family: "Muli", sans-serif;
     text-align: center;
     background: #2e8b57;
 }
@@ -30,18 +30,22 @@ header {
 
 header h1 {
     font-size: 1.25em;
-    color: rgba(50, 50, 50, 0.9);
+    color: #fff;
     margin-top: 35px;
 }
 
 .search-input {
-    padding: 15px 100px;
+    padding: 15px 0;
     border: 0;
     border-bottom: 2px #fff solid;
-    max-width: 20rem;
-    transition: .4s ease-out;
+    display: block;
+    width: 100%;
     background: transparent;
     color: #fff;
+}
+
+.search-input::placeholder {
+    color:#fff;
 }
 
 .search-input:active, .search-input:hover, .search-input:focus {
@@ -63,6 +67,24 @@ header h1 {
     border: 1px solid rgba(50, 50, 50, 0.9);
 }
 
+form {
+    position: relative;
+    margin: 20px 0 40px;
+    width: 300px;
+    color: white;
+    font-size: large;
+    font-weight: bolder;
+}
+
+form label {
+    position: absolute;
+    top: 15px;
+    left: 0;
+}
+
+.email {
+    color: lightgreen;
+}
 
 /* ===================================== 
    Gallery
@@ -80,6 +102,7 @@ header h1 {
   
 .card {
     display: flex;
+    color: #fff;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: flex-start;
@@ -90,7 +113,7 @@ header h1 {
     padding: 10px;
     background: rgb(4, 57, 39,0.4);
     border-radius: 0.25em;
-    border: 1px solid rgba(50, 50, 50, 0.3);
+
     transition: .4s ease-out;
     overflow: hidden;
 }
@@ -141,11 +164,15 @@ header h1 {
     min-height: 415px;
     margin: 10px auto auto;
     padding-bottom: 15px;
-    background: rgba(255, 255, 255, 1);
+    background: rgba(4, 57, 39,1);
+    color: #fff;
     border-radius: 0.25em;
     border: 1px solid rgba(100, 100, 100, 0.3);
     transition: .4s ease-out;
+    padding: 30px 20px;
+    font-weight: bold;
 }
+
 
 .modal-close-btn {
     position: absolute;
@@ -238,7 +265,6 @@ header h1 {
     }
 }
 
-
 /* ===================================== 
    Desktop
    Hover styles on desktop 
@@ -271,18 +297,7 @@ header h1 {
     bottom: 0;
     background: rgba(100, 100, 100, 0.4)
 }
-.modal {
-    width: 375px;
-    margin: 15% auto auto;
-    position: relative;
-    text-align: center;
-    background: #fff;
-    border: 1px solid #778;
-    border-radius: 5px;
-    padding: 30px 20px;
-    color:rgba(96,114,154);
-    font-weight: bold;
-}
+
 
 .modal-close {
     position: absolute;

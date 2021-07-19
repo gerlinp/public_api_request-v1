@@ -7,7 +7,6 @@ let employees = [];
 search.insertAdjacentHTML('beforeend', 
   `<form action="#" method="get">
       <input type="search" id="search-input" class="search-input" placeholder="Search...">
-      <input type="submit" value="&#x1F50D;" id="search-submit" class="search-submit">
   </form>`)
 
 
@@ -40,9 +39,9 @@ function displayEmployees(employeeData) {
       let picture = employee.picture;
       employeeHTML += `
           <div class="card" data-index="${index}">
-              <img class="avatar" src="${picture.large}" />
-              <div class="text-container text-grid">
-                  <h2 class="name">${name.first} ${name.last}</h2>
+              <img class="card-img" src="${picture.large}" />
+              <div class="card-info-container">
+              <h3 class="name" class="card-name cap">${name.first} ${name.last}</h3>
                   <p class="email">${email}</p>
                   <p class="address">${city}</p>
               </div>
@@ -50,6 +49,7 @@ function displayEmployees(employeeData) {
   });
   gallery.innerHTML = employeeHTML;
 }
+
 
 // Takes  selected employee and creates modal with employees information.
 function displayModal(index) {
@@ -121,11 +121,11 @@ document.body.addEventListener('click', function(e) {
   }
 })
 
-
-
+// Event listener for Search box
 document.body.addEventListener('keyup', function(e) {
     const search = e.target.value.toLowerCase();
     const names = document.querySelectorAll('.name')
+    
     names.forEach(person => {
         let name = person.innerHTML;
         let parent = person.parentElement.parentElement;
@@ -135,6 +135,7 @@ document.body.addEventListener('keyup', function(e) {
             parent.style.display = 'none';
         };
     });
+
 })
 
 
