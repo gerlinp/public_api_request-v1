@@ -87,8 +87,6 @@ gallery.addEventListener('click', e => {
       nxtBtn =  document.querySelector('.next');
       prvBtn =  document.querySelector('.prev');
       modalClose = document.querySelector(".modal-close");
-      console.log(e.target)
-      console.log(index) 
   }
 });
 
@@ -123,18 +121,21 @@ document.body.addEventListener('click', function(e) {
 
 // Event listener for Search box
 document.body.addEventListener('keyup', function(e) {
-    const search = e.target.value.toLowerCase();
-    const names = document.querySelectorAll('.name')
-    
-    names.forEach(person => {
-        let name = person.innerHTML;
-        let parent = person.parentElement.parentElement;
-        if (name.toLowerCase().indexOf(search.toLowerCase()) != -1){
-            parent.style.display = 'flex'
-        } else {
-            parent.style.display = 'none';
-        };
-    });
+    let input = document.querySelector('#search-input')
+    if ( input !== '') {
+      const search = e.target.value.toLowerCase();
+      const names = document.querySelectorAll('.name')
+      names.forEach(person => {
+          let name = person.innerHTML;
+          let parent = person.parentElement.parentElement;
+          if (name.toLowerCase().indexOf(search.toLowerCase()) != -1){
+              parent.style.display = 'flex'
+          } else {
+              parent.style.display = 'none';
+          };
+      });
+    }
+
 })
 
 
