@@ -35,15 +35,15 @@ function displayEmployees(employeeData) {
   employees.forEach((employee, index) => {
       let name = employee.name;
       let email = employee.email;
-      let city = employee.location.city;
       let picture = employee.picture;
+      let state = employee.location.state
       employeeHTML += `
           <div class="card" data-index="${index}">
               <img class="card-img" src="${picture.large}" />
               <div class="card-info-container">
               <h3 class="name" class="card-name cap">${name.first} ${name.last}</h3>
                   <p class="email">${email}</p>
-                  <p class="address">${city}</p>
+                  <p class="address">${state}</p>
               </div>
           </div>`
   });
@@ -63,12 +63,12 @@ function displayModal(index) {
     <div class="text-container">
         <h2 class="name">${name.first} ${name.last}</h2>
         <p class="email">${email}</p>
-        <p class="address">${city}</p>
+        <p class="address">${state}</p>
         <hr />
         <p>${phone}</p>
         <p>Birthday:
         ${date.getMonth()}/${date.getDate()}/${date.getFullYear()}</p>
-        <p class="address"> ${street.number} ${street.name}, ${state} ${postcode}</p>
+        <p class="address"> ${street.number} ${street.name}, ${city} ${postcode}</p>
     </div>
     <div>
     `;
