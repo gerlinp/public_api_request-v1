@@ -1,5 +1,3 @@
-# public_api_request-v1
- 
 # Project 5: Public API Request
 
 ## Changes to Styling
