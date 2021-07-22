@@ -112,7 +112,7 @@ form label {
     margin: 10px 10px 20px;
     padding: 10px;
     background: rgb(4, 57, 39,0.4);
-    border-radius: 0.25em;
+    border-radius: 0.75em;
     transition: .4s ease-out;
     overflow: hidden;
 }

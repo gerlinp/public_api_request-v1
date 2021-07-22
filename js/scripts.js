@@ -1,6 +1,7 @@
 const search = document.querySelector('.search-container');
 const searchBar = document.querySelector('#search')
 const gallery = document.querySelector("#gallery");
+let input = ''
 let employees = [];
 
 // added search function
@@ -59,7 +60,7 @@ function displayModal(index) {
     const modalContainer = document.querySelector(".modal-content");
     const modalHTML = `
     <div>
-    <img class="avatar img-thumbnail" src="${picture.large}" />
+    <img class="modal-img" src="${picture.large}" />
     <div class="text-container">
         <h2 class="name">${name.first} ${name.last}</h2>
         <p class="email">${email}</p>
@@ -120,23 +121,24 @@ document.body.addEventListener('click', function(e) {
 })
 
 // Event listener for Search box
-document.body.addEventListener('keyup', function(e) {
-    let input = document.querySelector('#search-input')
-    if ( input !== '') {
-      const search = e.target.value.toLowerCase();
-      const names = document.querySelectorAll('.name')
-      names.forEach(person => {
-          let name = person.innerHTML;
-          let parent = person.parentElement.parentElement;
-          if (name.toLowerCase().indexOf(search.toLowerCase()) != -1){
-              parent.style.display = 'flex'
-          } else {
-              parent.style.display = 'none';
-          };
-      });
-    }
+if (input.length) {
+  document.body.addEventListener('keyup', function(e) {
+      input = document.querySelector('#search-input')
+      if ( input !== '') {
+        const search = e.target.value.toLowerCase();
+        const names = document.querySelectorAll('.name')
+        names.forEach(person => {
+            let name = person.innerHTML;
+            let parent = person.parentElement.parentElement;
+            if (name.toLowerCase().indexOf(search.toLowerCase()) != -1){
+                parent.style.display = 'flex'
+            } else {
+                parent.style.display = 'none';
+            };
+        });
+      }
 
-})
-
+  })
+}
 
 
