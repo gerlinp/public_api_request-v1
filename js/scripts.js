@@ -121,24 +121,23 @@ document.body.addEventListener('click', function(e) {
 })
 
 // Event listener for Search box
-if (input.length) {
-  document.body.addEventListener('keyup', function(e) {
-      input = document.querySelector('#search-input')
-      if ( input !== '') {
-        const search = e.target.value.toLowerCase();
-        const names = document.querySelectorAll('.name')
-        names.forEach(person => {
-            let name = person.innerHTML;
-            let parent = person.parentElement.parentElement;
-            if (name.toLowerCase().indexOf(search.toLowerCase()) != -1){
-                parent.style.display = 'flex'
-            } else {
-                parent.style.display = 'none';
-            };
-        });
-      }
 
-  })
-}
+  document.body.addEventListener('keyup', function(e) {
+    if (document.querySelector('#search-input')) {
+      input = document.querySelector('#search-input')
+      const search = e.target.value.toLowerCase();
+      const names = document.querySelectorAll('.name')
+      names.forEach(person => {
+          let name = person.innerHTML;
+          let parent = person.parentElement.parentElement;
+          if (name.toLowerCase().indexOf(search.toLowerCase()) != -1){
+              parent.style.display = 'flex'
+          } else {
+              parent.style.display = 'none';
+          };
+      });
+    }
+  });
+
 
 
